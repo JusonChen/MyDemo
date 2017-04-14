@@ -1,0 +1,9 @@
+D:\My测试项目\MyDemo\事件和委托例子\bin\Debug\事件和委托例子.exe.config
+D:\My测试项目\MyDemo\事件和委托例子\bin\Debug\事件和委托例子.exe
+D:\My测试项目\MyDemo\事件和委托例子\bin\Debug\事件和委托例子.pdb
+D:\My测试项目\MyDemo\事件和委托例子\obj\Debug\事件和委托例子.Properties.Resources.resources
+D:\My测试项目\MyDemo\事件和委托例子\obj\Debug\事件和委托例子.测试窗体.resources
+D:\My测试项目\MyDemo\事件和委托例子\obj\Debug\事件和委托例子.csproj.GenerateResource.Cache
+D:\My测试项目\MyDemo\事件和委托例子\obj\Debug\事件和委托例子.exe
+D:\My测试项目\MyDemo\事件和委托例子\obj\Debug\事件和委托例子.pdb
+D:\My测试项目\MyDemo\事件和委托例子\obj\Debug\事件和委托例子.csprojResolveAssemblyReference.cache

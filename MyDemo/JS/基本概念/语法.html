@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../Mine/EventUtil.js"></script>
+</head>
+<body>
+    <input id="myTxt" value="czs11111111555" type="text" />
+    <input type="button" id="myBtn"/>
+    <script>
+
+        window.onload = function () {
+            /*
+            var ab = undefined || 1;
+            console.log(ab);
+
+            var num = 30;
+            switch (true)
+            {
+                case num < 25:
+                    console.log(1);
+                    break;
+                case num > 25&&num<29:
+                    console.log(2);
+                    break;
+                default:
+                    console.log(3);
+                    break;
+                   
+            }
+            var obj1 = {};
+            obj1.Name = "eva123";
+            doSomeThing(obj1);
+            console.log(obj1.Name);
+             
+            var obj2 = 1;
+            doSomeThing2(obj2);
+            console.log(obj2);
+            */
+
+            /*
+            var person = testFn();
+            console.log(person.Name);
+
+            var arr = new Array();
+            console.log(arr instanceof Array);
+            console.log(Array.isArray(arr));//多个框架都可以验证
+            */
+
+            var arr = [1, 2, 3, 4, 5, 6];
+            var filter = arr.filter(function (item, index, arr) {
+                return item > 2;
+            });
+            console.log(filter);
+            //every
+            var everyone = arr.every(function (item, index, arr) {
+                return item > 2;
+            });
+            console.log(everyone);//false
+            //som
+            var some = arr.some(function (item, index, arr) {
+                return item > 2;
+            });
+            console.log(some);//true
+            //map
+            var mapArr = arr.map(function (item, index, arr) {
+                return item * 2;
+            });
+            console.log(mapArr);
+            //相当于foreach循环
+            arr.forEach(function (item, index, arr) {
+                return item * 2;
+            });
+            console.log(arr);
+        }
+
+        /*
+        function doSomething() {
+            //严格模式
+            "use strict";
+        }
+
+        function doSomeThing(obj)
+        {
+            obj.Name = "czs";
+        }
+
+        function doSomeThing2(obj) {
+            obj1 = 2;
+        }
+        */
+
+        function testFn() {
+            var obj = new Object();
+            obj.Name = "czs";
+            return obj;
+        }
+
+       
+    </script>
+</body>
+</html>

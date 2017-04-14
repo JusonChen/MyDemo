@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../Mine/CommonFn.js"></script>
+</head>
+<body>
+    <input type="button" value="Test" onclick="TestFn()" />
+    <script>
+        /*
+        //窗口位置;
+        var leftPos = (typeof window.screenLeft == "number") ? window.screenLeft : window.screenX;
+        var topPss = (typeof window.screenTop == "number") ? window.screenTop : window.screenY;
+        console.log(leftPos);
+        console.log(topPss);
+        //默认禁用的方法
+        window.moveTo(0, 0);
+        window.moveBy(50, 50);
+        
+
+        //窗口大小
+        var pageWidth = window.innerWidth;
+        var pageHeight = window.innerHeight;
+        if (typeof pageWidth != "number") {
+            //浏览器是否标准模式
+            if (document.compatMode == "CSS1Compat") {
+                pageWidth = document.documentElement.clientWidth;
+                pageHeight = document.documentElement.clientHeight;
+            }
+            else {
+                pageWidth = document.body.clientWidth;
+                pageHeight = document.body.clientHeight;
+            }
+        }
+        console.log(pageWidth);
+        console.log(pageHeight);
+        //默认禁用的方法
+        window.resizeTo(100, 100);
+        window.resizeTo(50, 50);
+        */
+
+        /*
+        var abc = 1;
+        abc = abc = abc+1;
+        console.log(abc);
+        */
+
+        /*
+        //window.open
+        var win = window.open("https://www.baidu.com/", "mywin", "height=500,width=500,top=100,left=100;");
+      
+        console.log(blockedOpen());
+        */
+
+        /*
+        //超时调用        
+        var timeoutID = setTimeout(function () { console.log("timeoutID"); }, 5000);
+        clearTimeout(timeoutID);
+        var intervalID = setInterval(function () { console.log("intervalID"); }, 5000);
+        clearInterval(intervalID)
+
+        //模仿间歇调用
+        function setTimeoutFn() {
+            "use strict";
+            //用带有名字的函数表达式，防止严格模式下会报错，所以不用arguments.callee
+            setTimeout(function f() {
+                console.log("cccc");
+                setTimeout(f, 1000);
+            }, 1000);
+        }
+        */
+       
+        /*
+        //弹窗
+        var result = prompt("请输入你的名字", "czs");
+        if (result) {
+            console.log("(｡･∀･)ﾉﾞ嗨:" + result);
+        }
+        */
+
+        /*
+        //location
+        function TestFn() {
+            // location.assign("https://www.baidu.com");//会生成浏览器记录，改变location的属性，会默认调用这个方法
+            //location.replace("https://www.baidu.com");//不会生成浏览器记录
+            location.reload(true);//从服务器重新加载,如果不加参数true，有可能从缓存里加载(选择最有效的加载方式)
+        }
+        */
+
+        /*
+        //navigator
+        console.log(navigator.plugins.length);
+        */
+
+        /*
+        //历史记录 history
+        console.log(history.length);//等于0，代表历史记录的第一个页面
+        //history.go(-1);//后退一页
+        //history.go(1);//前进一页
+        //history.go("wwww.baidu.com");//从历史记录找这个网站，如果没找到不做任何动作;
+        //history.back();//后退一页
+        //history.forward(1)//前进一页
+        */
+    </script>
+</body>
+</html>

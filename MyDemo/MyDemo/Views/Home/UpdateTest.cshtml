@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "UpdateTest";
+}
+
+<h2>UpdateTest</h2>
+<h2>w24354316543754</h2>
+
+<script>
+    console.log(document.referrer);
+    console.log("5秒后返回原页面");
+    setTimeout(function () {        
+        location.assign(document.referrer);
+    }, 5000);
+</script>

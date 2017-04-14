@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div class="search-area full-width">
+        <div class="enter-key-for-submit">1</div>
+        <div id="testFn"></div>
+    </div>
+
+    <div class="search-area full-width">
+        <div class="enter-key-for-submit">2</div>
+        <div >
+            <div id="testFn2"></div>
+        </div>
+    </div>
+
+    <div class="search-area full-width">
+        <div>
+            <div class="enter-key-for-submit">3</div>
+            <div>
+                <input  type="text"/>
+                <div>
+                    <div id="testFn3"></div>
+                </div>
+            </div>
+        </div>        
+        <div>           
+        </div>
+    </div>
+    <button onclick="FindControl()">hehe</button>
+    <script>
+        function FindControl()
+        {
+            var testFn = document.getElementsByClassName("search-area full-width");
+            for (var i = 0; i < testFn.length; i++) {
+                var temp = testFn[i];
+                var childNodes = temp.childNodes();
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

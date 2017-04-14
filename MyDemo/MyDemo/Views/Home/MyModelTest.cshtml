@@ -1,0 +1,22 @@
+﻿@using MyDemo.Models;
+@{
+    Layout = null;
+    var model = ViewData.Model as MyModel;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyModelTest</title>
+    @if (model != null)
+    {
+        <div>@(model.Name)</div>
+    }
+</head>
+<body>
+    <div> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+D:\测试的项目\MyDemo\Common\bin\Debug\Common.dll
+D:\测试的项目\MyDemo\Common\bin\Debug\Common.pdb
+D:\测试的项目\MyDemo\Common\obj\Debug\Common.dll
+D:\测试的项目\MyDemo\Common\obj\Debug\Common.pdb
+D:\测试的项目\MyDemo\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\My测试项目\MyDemo\Common\bin\Debug\Common.dll
+D:\My测试项目\MyDemo\Common\bin\Debug\Common.pdb
+D:\My测试项目\MyDemo\Common\obj\Debug\Common.dll
+D:\My测试项目\MyDemo\Common\obj\Debug\Common.pdb

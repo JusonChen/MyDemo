@@ -1,0 +1,9 @@
+D:\My测试项目\MyDemo\OOP\bin\Debug\OOP.exe.config
+D:\My测试项目\MyDemo\OOP\bin\Debug\OOP.exe
+D:\My测试项目\MyDemo\OOP\bin\Debug\OOP.pdb
+D:\My测试项目\MyDemo\OOP\obj\Debug\OOP.Form1.resources
+D:\My测试项目\MyDemo\OOP\obj\Debug\OOP.Properties.Resources.resources
+D:\My测试项目\MyDemo\OOP\obj\Debug\OOP.TestForm.resources
+D:\My测试项目\MyDemo\OOP\obj\Debug\OOP.csproj.GenerateResource.Cache
+D:\My测试项目\MyDemo\OOP\obj\Debug\OOP.exe
+D:\My测试项目\MyDemo\OOP\obj\Debug\OOP.pdb

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>123435</title>
+	<meta charset="utf-8" />
+</head>
+<body><div id="myDiv">1        
+    </div>
+    <input type="button" onclick="TestFn_document()" value="TestButton" />
+    <script>
+
+        /*
+        var divMy = document.getElementById("myDiv");
+        //Node属性
+        console.log(divMy.nodeType == 1);
+        console.log(divMy.nodeValue);
+        console.log(divMy.nodeName);
+        //节点关系
+        console.log(divMy.childNodes.length);
+        var previousEle = divMy.previousSibling;//NULL
+        console.log(previousEle);
+        var nextEle = divMy.nextSibling;//Null
+        console.log(nextEle);
+        console.log(divMy.hasChildNodes());//True，比childNodes.length快
+
+        console.log(myDiv.ownerDocument.childNodes.length);
+        console.log(myDiv.ownerDocument.childNodes[0] == document.doctype);
+        */
+      
+        //Document
+        function TestFn_document() {
+            document.title = "Juson Title Test!";
+            console.log(document.URL);//地址显示的url
+            console.log(location.toString());
+            console.log(document.domain);//页面的域名
+            console.log(document.referrer);
+            console.log(document.documentElement);
+            //DOM的一致性的检测
+            var DOM1Check = document.implementation.hasFeature("DOM1", "10.0");//第一个参数功能名，第二个参数版本号,最好加上能力检测
+            console.log(DOM1Check);
+        }
+
+       
+    </script></body>
+</html>

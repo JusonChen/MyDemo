@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script src="../scripts/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+   
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="t1" value="123"  />
+            </td>
+            <td>
+               2222
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="text" id="t2" value="6666" />
+            </td>
+            <td>
+                9999
+            </td>
+        </tr>
+    </table>
+
+    <input type="button" onclick="copyText()" />
+
+    <input type="button" onclick="copyLabel()" value="复制lable" />
+
+    <span id="spanMy">riojbiojfcxjgpwe</span>
+
+    <label id="myLabel">tetewtwetaze</label>
+
+   
+    <script type="text/javascript">      
+       
+        function copy() {
+            var Url2 = document.getElementById("t1");
+            Url2.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            alert("已复制好，可贴粘。");
+        }
+
+
+      
+
+        function copyLabel(eleID) {
+            var bCheck = true;
+           
+            try {
+                selectText(eleID);
+                if (document.execCommand) {
+                    document.execCommand("copy", "false", null);
+                }
+            } catch (e) {
+                bCheck = false;
+            }
+            if (bCheck) {
+                alert("已复制好，可贴粘。");
+            }              
+        }
+
+        //js点击选择文本的方法
+        function selectText(eleID) {
+            if (document.selection) {
+                var range = document.body.createTextRange();
+                range.moveToElementText(document.getElementById(eleID));
+                range.select();
+            } else if (window.getSelection) {
+                var range = document.createRange();
+                range.selectNode(document.getElementById(eleID));
+                window.getSelection().addRange(range);             
+            }
+        }
+    </script>
+    
+
+</body>
+</html>
