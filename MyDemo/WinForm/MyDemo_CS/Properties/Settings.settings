@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MyDemo_CS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MyDemo_CS_MyWebServiceTest_Test20170116" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://121.199.162.144/Test20170116.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

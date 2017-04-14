@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+    <script>
+        /*
+        var myObj = {};
+        Object.defineProperties(myObj, {
+            Name: {
+                configurable: true,
+                value: "czs",
+                enumerable:true
+            },
+            Age: {
+                writable: true,
+                value: 26,
+                enumerable: false
+            }
+        });
+        //获取这个对象的Name属性
+        var myObjNamePro = Object.getOwnPropertyDescriptor(myObj, "Name");
+        console.log(myObjNamePro.configurable);
+        console.log(myObjNamePro.writable);
+        console.log(myObjNamePro.enumerable);
+        console.log(myObjNamePro.value);
+
+
+        console.log(Object.keys(myObj));//获取该对象可枚举的属性
+        console.log(Object.getOwnPropertyNames(myObj));//获取该对象所有的属性
+        */
+
+        /*
+        //原型
+        function Person() {
+        }
+        Person.prototype.Name = "czs";
+        Person.prototype.SayHello = function () {
+            alert("hi");
+        };
+        var person1 = new Person();
+        person1.Name = "eva";
+        var person2 = new Person();
+        console.log(IsPropertyOfPrototype(person2, "Name"));
+        console.log("Name" in person1);
+        
+        //原生的类型也是这么做的，可以给原生的类型的原型增加方法(不介意,方便理解即可)
+        String.prototype.GetTestStr = function () {
+            return "给原生类型的原型增加的方法";
+        }
+        var testStr = "abc";
+        console.log(testStr.GetTestStr());
+
+        //是否原型属性（可以作为公用方法）
+        function IsPropertyOfPrototype(obj, proName) {
+            return !obj.hasOwnProperty(proName) && (proName in obj);
+        }
+        */
+
+        /*
+        //组合构造函数模式和原型模式，解决引用类型的属性
+        //单纯时候原型模式
+        function Person() {
+        }
+        Person.prototype.Name = "czs";
+        Person.prototype.NameList = ["czs", "eva"];
+
+        var person1 = new Person();
+        var person2 = new Person();
+        person1.NameList.push("beibei");
+        console.log(person2.NameList);//["czs", "eva","beibei"]
+
+        //组合后:
+        function PersonUpdate() {
+            this.NameList = ["czs", "eva"];
+            if (typeof this.Name != String) {
+                PersonUpdate.prototype.Name = "beibei";
+            }
+        }       
+
+        var per1 = new PersonUpdate();
+        var per2 = new PersonUpdate();
+        per1.NameList.push(per1.Name);
+        console.log(per1.NameList);//["czs", "eva","beibei"]
+        console.log(per2.NameList);//["czs", "eva"]
+        */
+
+        /*
+        //寄生构造函数模式
+        //拿扩展原生类型来说(在原生的Array的基础上，扩展了一个MyJoinString方法)
+        function MyArray() {
+            var obj = new Array();
+            obj.MyJoinString = function () {
+                return this.join("#");
+            }
+            return obj;
+        }
+        var myArr = new MyArray();
+        for (var i = 0; i < 5; i++) {
+            myArr[myArr.length] = i;
+        }
+        console.log(myArr.MyJoinString());//0#1#2#3#4
+        console.log(myArr.toString());//0,1,2,3,4
+        */
+
+        /*
+        // A:组合继承(借用构造函数+原型链)
+        function SupperType(name) {
+            this.Sex = "NAN";
+            this.name = name;
+            this.Colors = ["Red","Yellow"];
+        }
+        SupperType.prototype.SayName = function () {
+            console.log(this.name);
+        }
+
+        function SubType(name,age) {
+            SupperType.call(this, name);//借用超类型的构造函数
+            this.age = age;
+        }
+        SubType.prototype = new SupperType();//原型链
+        SubType.prototype.SayAge = function () {
+            console.log(this.age);
+        }
+
+        var instance1 = new SubType("czs", 18);        
+        instance1.Colors.push("Black");
+        instance1.SayName();//czs
+        instance1.SayAge();//18
+        console.log(instance1.Colors);// ["Red","Yellow","Black"]
+
+        var instance2 = new SubType("eva", 17);
+        instance2.SayName();//eva
+        instance2.SayAge();//17
+        console.log(instance2.Colors);// ["Red","Yellow"]
+        */
+
+        /*
+        //B:寄生组合式继承（在A的基础上改进）
+        function SupperType(name) {
+            this.Sex = "NAN";
+            this.name = name;
+            this.Colors = ["Red", "Yellow"];
+        }
+        SupperType.prototype.SayName = function () {
+            console.log(this.name);
+        }
+
+        function SubType(name, age) {
+            SupperType.call(this, name);//借用超类型的构造函数
+            this.age = age;
+        }
+        inheriPrototype(SubType, SupperType);
+        SubType.prototype.SayAge = function () {
+            console.log(this.age);
+        }
+
+        var instance1 = new SubType("czs", 18);
+        instance1.Colors.push("Black");
+        instance1.SayName();//czs
+        instance1.SayAge();//18        
+        console.log(instance1.Colors);// ["Red","Yellow","Black"]
+
+        var instance2 = new SubType("eva", 17);
+        instance2.SayName();//eva
+        instance2.SayAge();//17
+        console.log(instance2.Colors);// ["Red","Yellow"]        
+
+        //原型式继承
+        function Object(obj) {
+            function F() { };
+            F.prototype = obj;
+            return new F();
+        }
+
+        //寄生组合式继承
+        function inheriPrototype(subType, supperType) {
+            var obj = Object(supperType.prototype);
+            obj.constructor = subType;
+            subType.prototype = supperType.prototype;
+        }
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HighCharts</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    @*<script src="~/Scripts/jquery.highchars/highcharts.js"></script>*@
+
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/data.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/drilldown.js"></script>
+</head>
+<body>
+    <div>@ViewBag.CZSTitil</div>
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <script>
+        $(function () {
+            aa();
+            global.ui.chart.stackColumn("#container", "年度分析", "事故 (起)",
+                  [
+                     {
+                         name: "未结案",
+                         data: [
+                             {
+                                 name: "2012a年",
+                                 y: 500
+                             },
+                             {
+                                 name: "2013年",
+                                 y: 200,
+                                 drilldown: 'year'
+                             },
+                             {
+                                 name: "2014年",
+                                 y: 560,
+                                 drilldown: 'year'
+                             },
+                             {
+                                 name: "2015年",
+                                 y: 150,
+                                 drilldown: 'year'
+                             },
+                             {
+                                 name: "2016年",
+                                 y: 680,
+                                 drilldown: 'year'
+                             }]
+                     },
+                     {
+                         name: "已结案",
+                         data: [
+                             {
+                                 name: "2012a年",
+                                 y: 740,
+                                 drilldown: 'year2'
+                             },
+                             {
+                                 name: "2013年",
+                                 y: 858,
+                                 drilldown: 'year'
+                             },
+                             {
+                                 name: "2014年",
+                                 y: 10,
+                                 drilldown: 'year'
+                             },
+                             {
+                                 name: "2015年",
+                                 y: 855,
+                                 drilldown: 'year'
+                             },
+                             {
+                                 name: "2016年",
+                                 y: 600,
+                                 drilldown: 'year'
+                             }]
+                     }
+                  ],
+                  [{
+                      id: 'year',
+                      name: "未结案",
+                      data: _data
+                  },
+             {
+                 id: 'year2',
+                 name: "已结案",
+                 data: _data2
+             }]);
+        });
+
+        var global = {};
+        global.app = {};
+        global.ui = {};
+        
+        var _drillUpButton = {
+            relativeTo: 'spacingBox',
+            position: {
+                y: 0,
+                x: 0
+            },
+            theme: {
+                fill: 'white',
+                'stroke-width': 1,
+                stroke: 'silver',
+                r: 0,
+                states: {
+                    hover: {
+                        fill: '#bada55'
+                    },
+                    select: {
+                        stroke: '#039',
+                        fill: '#bada55'
+                    }
+                }
+            }
+        };
+
+        var _data = [
+                        ["租赁二分公司(原商务车分公司)", 5000],
+                        ["市西服务中心-已禁用", 2496],
+                        ["专车管理中心", 54],
+                        ["营运九分公司", 13177],
+                        ["大众新亚出租汽车公司", 317],
+                        ["金山大众出租汽车公司", 7407],
+                        ["国宾车分公司", 11],
+                        ["租用车队", 89],
+                        ["约租车队", 800],
+                        ["嘉定大众出租汽车公司-已禁用", 62],
+                        ["市中出租", 804],
+                        ["浦东出租", 880],
+                        ["市南出租", 474],
+                        ["奉贤大众汽车客运公司", 10],
+                        ["租赁第一分公司(市西分公司)", 5700]
+        ];
+        var _data2 = [
+                        ["租赁二分公司(原商务车分公司)", 3000],
+                        ["市西服务中心-已禁用", 2496],
+                        ["专车管理中心", 54],
+                        ["营运九分公司", 13177],
+                        ["大众新亚出租汽车公司", 317],
+                        ["金山大众出租汽车公司", 7407]
+        ];
+
+        global.ui.chart = {
+            stackColumn: function (id, title, value, data, drilldownSeries) {
+                $(id).highcharts({
+                    chart: {
+                        type: 'column',
+                        options3d: {
+                            enabled: true,
+                            alpha: 15,
+                            beta: 15,
+                            depth: 50,
+                            viewDistance: 25
+                        }
+                    },
+                    title: {
+                        text: title,
+                        style: "font-size:12px;"
+                    },
+                    xAxis: {
+                        labels: {
+                            rotation: -45,
+                            style: {
+                                fontSize: '13px',
+                                fontFamily: 'Verdana, sans-serif'
+                            }
+                        },
+                        type: "category"
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: value,
+                            align: 'high'
+                        }, labels: {
+                            enabled: false
+                        }
+                    },
+                    tooltip: {
+                        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+                        shared: true
+                    },
+                    plotOptions: {
+                        column: {
+                            stacking: 'normal',
+                            dataLabels: {
+                                enabled: true
+                            },
+                            showInLegend: false
+                        }
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    series: data,
+                    drilldown: {
+                        drillUpButton: _drillUpButton,
+                        series: drilldownSeries
+                    }
+                });
+            }
+        };
+
+        function aa() {
+            var ccc = [];
+            if (ccc instanceof Array)
+            {
+                alert(1);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+D:\My测试项目\MyDemo\Test20170414\bin\Debug\Test20170414.exe.config
+D:\My测试项目\MyDemo\Test20170414\bin\Debug\Test20170414.exe
+D:\My测试项目\MyDemo\Test20170414\bin\Debug\Test20170414.pdb
+D:\My测试项目\MyDemo\Test20170414\obj\Debug\Test20170414.exe
+D:\My测试项目\MyDemo\Test20170414\obj\Debug\Test20170414.pdb

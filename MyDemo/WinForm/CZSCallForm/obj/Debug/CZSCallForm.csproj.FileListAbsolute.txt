@@ -1,0 +1,16 @@
+D:\My测试项目\MyDemo\CZSCallForm\bin\Debug\CZSCallForm.exe.config
+D:\My测试项目\MyDemo\CZSCallForm\bin\Debug\CZSCallForm.exe
+D:\My测试项目\MyDemo\CZSCallForm\bin\Debug\CZSCallForm.pdb
+D:\My测试项目\MyDemo\CZSCallForm\obj\Debug\CZSCallForm.Form1.resources
+D:\My测试项目\MyDemo\CZSCallForm\obj\Debug\CZSCallForm.Properties.Resources.resources
+D:\My测试项目\MyDemo\CZSCallForm\obj\Debug\CZSCallForm.csproj.GenerateResource.Cache
+D:\My测试项目\MyDemo\CZSCallForm\obj\Debug\CZSCallForm.exe
+D:\My测试项目\MyDemo\CZSCallForm\obj\Debug\CZSCallForm.pdb
+D:\My测试项目\MyDemo\WinForm\CZSCallForm\bin\Debug\CZSCallForm.exe.config
+D:\My测试项目\MyDemo\WinForm\CZSCallForm\bin\Debug\CZSCallForm.exe
+D:\My测试项目\MyDemo\WinForm\CZSCallForm\bin\Debug\CZSCallForm.pdb
+D:\My测试项目\MyDemo\WinForm\CZSCallForm\obj\Debug\CZSCallForm.Form1.resources
+D:\My测试项目\MyDemo\WinForm\CZSCallForm\obj\Debug\CZSCallForm.Properties.Resources.resources
+D:\My测试项目\MyDemo\WinForm\CZSCallForm\obj\Debug\CZSCallForm.csproj.GenerateResource.Cache
+D:\My测试项目\MyDemo\WinForm\CZSCallForm\obj\Debug\CZSCallForm.exe
+D:\My测试项目\MyDemo\WinForm\CZSCallForm\obj\Debug\CZSCallForm.pdb

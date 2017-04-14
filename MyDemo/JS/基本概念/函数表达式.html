@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        //让函数有个名字
+        var TestFn = (function f(num) {
+            if (num <= 1) {
+                return 1;
+            }
+            else {
+                return num * f(num-1);
+            }
+        });
+
+        var otherFn = TestFn;
+        console.log(otherFn(5));
+        
+        /*
+        //匿名函数的执行环境具有全局性，this一般指向window;
+        //闭包函数，执行的时候，一般先会构建自己的执行环境，自动先搜索this,arguments这两个活动对象，如果搜索到变量，就会停止搜索，不会去搜索外部的同名变量，所以返回window.Name
+        var Name = "czs";
+        var obj = {
+            Name: "eva",
+            SayName: function () {
+                return function () {
+                    return this.name;
+                }
+            }
+        };
+        console.log(obj.SayName()());//czs
+        */
+
+        //
+        var Name = "czs";
+        var obj = {
+            Name: "eva",
+            SayName: function () {
+                var that = this;//将obj的执行环境保存到变量，让闭包引用外部环境的that变量;
+                return function () {
+                    return that.Name;
+                }
+            }
+        };
+        console.log(obj.SayName()());//czs
+
+
+        //利用闭包，模仿块级作用域
+        (function () {
+            //你的代码
+        })();
+        //可以理解为
+        var MyFn = function () {
+        };
+        MyFn();
+        //替换为，理解为，立即执行的函数;
+        (function () {
+
+        })();
+    </script>
+</body>
+</html>

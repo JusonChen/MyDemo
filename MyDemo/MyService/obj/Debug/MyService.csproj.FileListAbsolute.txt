@@ -1,0 +1,13 @@
+D:\My测试项目\MyDemo\MyService\bin\Debug\点击卸载服务.bat
+D:\My测试项目\MyDemo\MyService\bin\Debug\点击安装服务.bat
+D:\My测试项目\MyDemo\MyService\bin\Debug\MyService.exe.config
+D:\My测试项目\MyDemo\MyService\bin\Debug\MyService.exe
+D:\My测试项目\MyDemo\MyService\bin\Debug\MyService.pdb
+D:\My测试项目\MyDemo\MyService\bin\Debug\Common.dll
+D:\My测试项目\MyDemo\MyService\bin\Debug\Common.pdb
+D:\My测试项目\MyDemo\MyService\obj\Debug\MyService.csprojResolveAssemblyReference.cache
+D:\My测试项目\MyDemo\MyService\obj\Debug\MyService.MyService.resources
+D:\My测试项目\MyDemo\MyService\obj\Debug\MyService.ProjectInstaller.resources
+D:\My测试项目\MyDemo\MyService\obj\Debug\MyService.csproj.GenerateResource.Cache
+D:\My测试项目\MyDemo\MyService\obj\Debug\MyService.exe
+D:\My测试项目\MyDemo\MyService\obj\Debug\MyService.pdb

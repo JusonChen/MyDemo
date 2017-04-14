@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Test2";
+}
+
+<h2>Test2</h2>
+
+<form id="myForm">
+    用户：<input id="txtName" name="txtName" type="text" />
+    密码<input id="password" name="password" type="text" />
+    <button onclick="test()">button提交</button>
+    <input type="button" onclick="test()" value="input提交" />
+</form>
+
+<span class="folderChild">
+    <a id="leaf_'&quot;><img src=x onerror=alert(8)>" href="javascript:void(0);" onclick="ShowReportDetail(this)" ref="9" nodetype="99" level="2" iscloud="1" style="color:black;" title="'&quot;><img src=x onerror=alert(8)>" ispophtml="true">
+    '"&gt;&lt;img src=x onerror=alert(8)&gt;</a>
+</span>
+
+<div id="BusShopList"></div>
+
+
+<a href="/Home/UpdateTest">测试document.referrer</a>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+   
+   
+   
+
+    function test() {
+        //var txtName = $("#txtName").val();
+        //var password = $("#password").val();
+        //var data = { txtName: txtName, password: password };
+        var data = $("#myForm").serialize();
+             
+        $.ajax({
+            url: "/Home/UpdateTest",
+            data: data,
+            dataType: "html",
+            type: "post",
+            success: function (html) {
+             
+                $("#BusShopList").html(html);
+            }, error: function () {
+                alert("载入错误！");
+            }
+        });
+    }
+</script>
